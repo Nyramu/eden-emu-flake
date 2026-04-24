@@ -120,7 +120,7 @@
           submodules = true;
         };
 
-        patches = [ (self.outPath + "/patches/discord-rpc-compat.patch") ];
+        patches = [ (self.outPath + "/modules/patches/discord-rpc-compat.patch") ];
 
         nativeBuildInputs = [
           pkgs.cmake
