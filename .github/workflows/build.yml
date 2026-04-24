@@ -16,4 +16,4 @@ jobs:
         with:
           name: eden-emu-flake
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
-      - run: nix build .#eden
+      - run: nix build .#default
