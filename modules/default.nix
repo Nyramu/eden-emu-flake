@@ -14,7 +14,7 @@
         enable = lib.mkEnableOption "Eden emulator";
         package = lib.mkOption {
           type = lib.types.package;
-          default = self.packages."x86_64-linux".default;
+          default = self.packages.x86_64-linux.default;
           description = "The Eden package to use.";
         };
       };
