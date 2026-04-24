@@ -1,4 +1,4 @@
-{ ... }:
+{ self, ... }:
 {
   perSystem =
     { pkgs, lib, ... }:
@@ -120,7 +120,7 @@
           submodules = true;
         };
 
-        patches = [ ../discord-rpc-compat.patch ];
+        patches = [ (self.outPath + "/patches/discord-rpc-compat.patch") ];
 
         nativeBuildInputs = [
           pkgs.cmake
