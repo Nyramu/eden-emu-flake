@@ -3,7 +3,6 @@
   flake.homeModules.default =
     {
       config,
-      pkgs,
       lib,
       ...
     }:
@@ -15,8 +14,7 @@
         enable = lib.mkEnableOption "Eden emulator";
         package = lib.mkOption {
           type = lib.types.package;
-          default = pkgs.qt6Packages.callPackage (self + "/package.nix") { };
-          defaultText = lib.literalExpression "pkgs.qt6Packages.callPackage (self + \"/package.nix\") { }";
+          default = self.packages."x86_64-linux".default;
           description = "The Eden package to use.";
         };
       };
