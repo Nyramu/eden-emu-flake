@@ -29,11 +29,13 @@ Add this flake input:
 }
 ```
 
-Then import the Home Manager module:
+Then import the NixOS or Home Manager module:
 
 ```nix
 {
-  imports = [ inputs.eden.homeModules.default ];
+  imports = [
+    inputs.eden.nixosModules.default # or inputs.eden.homeModules.default
+  ];
 }
 ```
 
@@ -58,7 +60,7 @@ This flake sets `extra-substituters` and `extra-trusted-public-keys` via
 
 ## Usage
 
-Enable Eden via the Home Manager module:
+Enable Eden:
 
 ```nix
 { ... }:
